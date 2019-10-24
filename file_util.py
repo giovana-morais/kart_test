@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 import os
-import datetime
+import time, datetime
 import race, pilot, lap
 
 def parse_file(input_file):
@@ -31,8 +31,17 @@ def parse_line(line):
     lap_time = match.group(5)
     speed = match.group(6).replace(",", ".")
 
-    return hour, pilot_id, pilot_name, int(lap), lap_time, float(speed)
+    return correct_variable_types(hour, pilot_id, pilot_name, lap, lap_time, speed)
 
 def correct_variable_types(hour, pilot_id, pilot_name, lap_number, lap_time, lap_speed):
-    return
+    # TODO: usar uma regex aqui tbm pra separar os dados pq fica mais facil
+    lap_time = datetime.time(0, 
+                            int(lap_time.split(':')[0]), # minute
+                            int(lap_time.split(':')[1].split('.')[0]), # seconds
+                            int(lap_time.split('.')[1])*1000 # microseconds
+                            ) 
+    hour = time.strptime(hour, "%H:%M:%S.%f")
+    lap_number = int(lap_number)
+    lap_speed = float(lap_speed)
 
+    return hour, pilot_id, pilot_name, lap_number, lap_time, lap_speed

@@ -1,3 +1,5 @@
+# -*- coding: utf8 -*-
+
 class Lap:
     def __init__(self, number, time, speed):
         self.number = number
