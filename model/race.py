@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
-import pilot as p
-import lap as l
+import model.pilot as p
+import model.lap as l
 
 class Race:
     def __init__(self, race_data):

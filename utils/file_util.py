@@ -2,7 +2,7 @@
 import re
 import os
 import time, datetime
-import race, pilot, lap
+import model.race, model.pilot, model.lap
 
 def parse_file(input_file):
     race_info = []

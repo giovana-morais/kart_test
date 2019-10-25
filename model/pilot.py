@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 
 import time, datetime
-from time_utils import *
+from utils.time_utils import *
 
 class Pilot:
     def __init__(self, pilot_id, name):
