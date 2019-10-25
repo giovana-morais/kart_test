@@ -1,7 +1,7 @@
-import file_util
+import utils.file_util
 
 import sys
-import race, pilot, lap
+import model.race, model.pilot, model.lap
 
 if __name__ == "__main__":
 

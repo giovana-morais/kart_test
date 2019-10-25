@@ -15,13 +15,7 @@ Hora                               Piloto             Nº Volta   Tempo Volta   
 
 ## Getting Started
 
-You must have `Python 3.6` or higher to run the project. No external libs are needed for this branch.
-
-If you want to check out the `Pandas` branch, then you must have `pip` installed and run the
-following command:
-
-`pip install -r requirements.txt`
-
+You must have `Python 3.6` or higher to run the project. No external libs are needed for this project.
 
 Clone the repository
 
