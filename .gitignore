@@ -1,1 +1,3 @@
+model.egg-info
 __pycache__/
+tests/__pycache__/
