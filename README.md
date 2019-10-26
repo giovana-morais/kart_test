@@ -1,6 +1,6 @@
 ## Kart Race Test
 
-This software emulates a kart race using data in the following format. 
+This software emulates a kart race using data in the following format.
 
 ```
 Hora                               Piloto             Nº Volta   Tempo Volta       Velocidade média da volta
@@ -15,13 +15,17 @@ Hora                               Piloto             Nº Volta   Tempo Volta   
 
 ## Getting Started
 
-You must have `Python 3.6` or higher to run the project. No external libs are needed for this project.
+You must have `Python 3.7` or higher to run the project. No external libs are
+needed to run this project.
+
+I recommend installing `virtualenv` to isolate dependencies from your system
+Python installation.
 
 Clone the repository
 
 `git clone https://github.com/giovana-morais/kart_test.git`
 
-and then run the project
+and run the project
 
 `python main.py <log_file.txt>`
 
@@ -52,3 +56,27 @@ Pilot's average speed:
 	F.ALONSO average speed was 38.066 km/h
 	S.VETTEL average speed was 25.746 km/h
 ```
+
+## Testing
+
+To run tests, install, create and activate your `virtualenv`
+
+`pip install virtualenv`
+
+`virtualenv -p python3 venv`
+
+`source venv/bin/activate`
+
+install `pytest`
+
+`pip install pytest`
+
+and then install the `model` package to help `pytest` find our files
+
+`pip install -e .`
+
+Finally, `cd` to `tests/` and run
+
+`pytest <test_file> -v`
+
+
